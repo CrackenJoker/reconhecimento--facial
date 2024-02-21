@@ -31,5 +31,3 @@ Para correspondência de descritores, é usado o LSH multi-sonda, que melhora o 
 
 ORB em OpenCV
 Como de costume, temos que criar um objeto ORB com a função cv.ORB() ou usando a interface comum feature2d. Possui vários parâmetros opcionais. Os mais úteis são nFeatures que denota o número máximo de recursos a serem retidos (por padrão 500), scoreType que indica se a pontuação de Harris ou pontuação FAST para classificar os recursos (por padrão, pontuação de Harris) etc. Outro parâmetro, WTA_K decide o número de pontos que produzem cada elemento do descritor BRIEF orientado. Por padrão são dois, ou seja, seleciona dois pontos por vez. Nesse caso, para correspondência, é usada a distância NORM_HAMMING. Se WTA_K for 3 ou 4, o que leva 3 ou 4 pontos para produzir o descritor BRIEF, então a distância correspondente é definida por NORM_HAMMING2.
-
-Abaixo está um código simples que mostra o uso do ORB.
